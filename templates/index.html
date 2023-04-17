@@ -6,19 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
     <title>Batalha de Elementos</title>
 </head>
 <body>  
-    <div class="fundo">
-        <div class="logo">  
-            <h1> Bem-Vindo! </h1>
-            <p>
-                A batalha de elementos vai começar...   
-            </p>
-            <a class="button"  href="/">
-                <span>Iniciar</span>
-            </a>         
-        </div>
-    </div>   
+    <form action="{% url 'login' %}" method="post" class="fundo">  {% csrf_token %}
+        <div class="login">     
+            <img src="{% static 'img/logo.png'%}">
+            <h1>Batalha de Elementos</h1>
+            <input type="text" placeholder="Nome" name="nome" class="login_input"> 
+            <button type="submit" class="login_button">Jogar</button> 
+        </div>       
+    </form>   
 </body>
 </html>
