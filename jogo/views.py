@@ -9,7 +9,7 @@ def login(request):
             return render(request, 'index.html')
 
         context = {
-            'nome': nome.strip()
+            'nome': nome.strip().capitalize()
         }
 
         return render(request, 'batalha.html', context)

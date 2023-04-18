@@ -1,4 +1,11 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Press Start 2P', cursive;
+}
  .grid{
+    margin-top: 5px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
@@ -13,13 +20,24 @@
     width: 100%;
     max-width: 1200px;
     position: absolute;
+    margin-bottom: 50px;
     bottom: 0;
-    left: 180px;
+    left: 178px;
     margin: 10px;
  }
 
  .card{
     aspect-ratio: 3/4;
+    width: 100%;
+    background-color: grey;
+    border-radius: 5px;
+    position: relative;
+    transition: all 800ms ease;
+    transform-style: preserve-3d;
+    
+ }
+ .card_maquina{
+   aspect-ratio: 3/4;
     width: 100%;
     background-color: grey;
     border-radius: 5px;
@@ -51,25 +69,18 @@
  .card:hover{
     transform: rotateY(180deg);
  }
- .front2{
-    background-image: url('../img/back.png');
-    transform: rotateY(180deg);
- }
-
- .back2{
-    background-image: url('../img/front.png');
-    backface-visibility: hidden;
- }
 
  .campo{
+    margin: 6px;
     display: grid;
     grid-template-columns: 180px 1200px;
     gap: 10px;
  }
 
  .mao{
+    margin-top: 5px;
     background-color: brown;
-    height: 260px;
+    height: 220px;
     padding-left: 10%;
     position: relative;
  }
@@ -87,18 +98,33 @@
     gap: 10px;
     position: absolute;
     bottom: 0;
-    margin: 2px;
+    margin: 8px;
  }
 
  .mao2{
     background-color: brown;
-    height: 260px;
+    height: 220px;
     padding-left: 10%;
     position: relative;
+    word-break: break-all;
+    margin-bottom: 10px;
  }
 
  .mao2 h1{
     position: absolute;
     top: 50%;
-    transform: translate(10%, -90%) 
+    transform: translate(10%, -60%) 
+ }
+
+ .teste{
+   width: 802px;
+   height: 280px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background-color: rgb(42, 50, 165);
+   margin-left: 395px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
  }
