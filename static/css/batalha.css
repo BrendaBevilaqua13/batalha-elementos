@@ -36,15 +36,6 @@
     transform-style: preserve-3d;
     
  }
- .card_maquina{
-   aspect-ratio: 3/4;
-    width: 100%;
-    background-color: grey;
-    border-radius: 5px;
-    position: relative;
-    transition: all 800ms ease;
-    transform-style: preserve-3d;
- }
 
  .face{
     width: 100%;
@@ -57,7 +48,6 @@
  }
 
  .front{
-    background-image: url('../img/front.png');
     transform: rotateY(180deg);
  }
 

@@ -10,42 +10,30 @@
     <title>Batalha de Elementos</title>
 </head>
 <body> 
-    <div class="campo">
-
-    <div class="mao"> <h1> Máquina</h1> </div>
-
-    <a href="/">
+     
     <div class="grid">
-        <div class="card_maquina">
-            <div class="face front"></div>
+        {% for carta in baralho %}
+        <a href="{% url 'teste' carta.id %}">
+        <div class="card">
+            <div class="face front">
+                <h1>{{carta.elemento}}</h1>
+                <img src="{{MEDIA_URL.carta.front}}" alt="">
+            </div>
             <div class="face back"></div>
         </div>
-        <div class="card_maquina">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-
-        <div class="card_maquina">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card_maquina">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card_maquina">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card_maquina">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        
-
+        </a>
+        {% endfor %}
     </div>
-    </a>
+   
+</body>
+</html>
 
+<!--
+     <div class="mao"> <h1> Máquina</h1> </div>
+-->
+
+
+<!--
     </div>
     <div class="teste">
         <h1>
@@ -54,42 +42,22 @@
     
     </div>
 
-    <div class="campo2"> 
+-->
+
+<!--
+        <div class="campo2"> 
 
     <div class="mao2"> <h1>{{nome}}</h1> </div>
 
+
+    {% for carta in baralho %}
     <a href="/">
     <div class="grid2">
         <div class="card">
             <div class="face front"></div>
             <div class="face back"></div>
         </div>
-        <div class="card">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-        <div class="card">
-            <div class="face front"></div>
-            <div class="face back"></div>
-        </div>
-
-
     </div>
     </a>
-
-     </div>
-
-</body>
-</html>
+    {%endfor%}
+-->
