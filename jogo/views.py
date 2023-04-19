@@ -14,17 +14,13 @@ def baralho(request):
         baralho = []
         while len(baralho) < 5:
             elemento = random.choice(cartas)
-            baralho.append(elemento)
-        
-        print(len(baralho))
-        for i in baralho:
-            print(i.elemento)
-            
-            
+            if elemento is baralho:
+                continue
+            baralho.append(elemento)  
     
         context = {
             'nome': nome.strip().capitalize(),
-            'cartas': cartas,
+            'cartas': baralho,
         }
 
         return render(request, 'batalha.html', context)
