@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class Carta(models.Model):
+    front = models.ImageField(upload_to= 'imagem', blank=False)
+    elemento = models.CharField(max_length= 100,  blank=False, default='')
