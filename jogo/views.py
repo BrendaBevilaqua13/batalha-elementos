@@ -7,7 +7,7 @@ def baralho(request):
     if request.method == 'POST':
         nome = request.POST['nome'].strip()
 
-        if len(nome) == 0:
+        if len(nome) == 0 or len(nome) > 8:
             return render(request, 'index.html')
 
         cartas = Carta.objects.all()

@@ -4,13 +4,24 @@
    box-sizing: border-box;
    font-family: 'Press Start 2P', cursive;
 }
+
+.campo{
+   background-color: blue;
+   margin: 5px 85px;
+   width: 100%;
+   height: 620px;
+   max-width: 1200px; 
+   align-items: center;
+   grid-column-gap: 10px;
+}
+
  .grid{
     margin-top: 5px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
     width: 100%;
-    max-width: 900px;   
+    max-width: 1100px;   
  }
 
  .card{
@@ -57,16 +68,6 @@
     transform: rotateY(180deg);
  }
 
- .campo{
-   background-color: blue;
-   margin: 5px 50px;
-   width: 100%;
-   height: 620px;
-   max-width: 1200px; 
-   align-items: center;
-   grid-column-gap: 10px;
-}
-
  .grid_superior{
     margin: 20px 15px;
     display: grid;
@@ -89,6 +90,7 @@
 }
 
 .campo_central{
+   text-align: center;
    height: 150px;
    width: 350px;
    background-color: brown;
@@ -100,7 +102,7 @@
    margin-top: 5px;
    padding-left: 10%;
    position: relative;
-}
+ }
 
 .mao h1{
    position: absolute;
@@ -108,6 +110,7 @@
    left: 50%;
    transform: translate(-50%, -90%) 
 }
+
 
  /*.campo2{
     display: grid;
