@@ -10,19 +10,56 @@
     <title>Batalha de Elementos</title>
 </head>
 <body> 
-     
+    <div class="campo">
+
+    <div class="grid_superior">
+    <div class="mao">
+         <h1> mão</h1>    
+    </div>   
     <div class="grid">
         {% for carta in baralho %}
         <a href="{% url 'teste' carta.id %}">
         <div class="card">
             <div class="face front">
-                <h1>{{carta.elemento}}</h1>
-                <img src="{{MEDIA_URL.carta.front}}" alt="">
+                <img src="{{carta.front.url}}" alt="">
             </div>
             <div class="face back"></div>
         </div>
         </a>
         {% endfor %}
+    </div>
+    </div>
+
+    <div class="grid_central">
+        <div class="campo_central">
+            <h1> tempo</h1>    
+        </div>  
+        <div class="campo_central">
+            <h1> tempo</h1>    
+        </div> 
+        <div class="campo_central">
+            <h1> tempo</h1>    
+        </div>
+    </div>
+
+    <div class="grid_inferior">
+        <div class="mao">
+            <h1> mão</h1>    
+        </div>   
+        <div class="grid">
+            {% for carta in baralho %}
+            <a href="{% url 'teste' carta.id %}">
+            <div class="card">
+                <div class="face front">
+                    <img src="{{carta.front.url}}" alt="">
+                </div>
+                <div class="face back"></div>
+            </div>
+            </a>
+            {% endfor %}
+        </div>
+        </div>
+
     </div>
    
 </body>
