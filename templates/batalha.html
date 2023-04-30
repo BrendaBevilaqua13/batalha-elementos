@@ -37,7 +37,14 @@
             <h2> P2</h2>  
         </div>  
         <div class="campo_central">
-            <h1> tempo</h1>    
+            {% if carta %}
+            <h1> Jogada:</h1>
+            <p> {{carta.elemento}} </p>    
+            <p> {{carta.ataque}} </p>    
+            <p> {{carta.defesa}} </p>
+            {% else %}
+            <h1> Pensando ... </h1>
+            {% endif %}
         </div> 
         <div class="campo_central">
             <h1> tempo</h1>    
